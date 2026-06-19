@@ -10,7 +10,7 @@ import sys
 def build_radiotap():
     # Explicitly set rate (2 = 1Mbps), tx flags, channel info
     return RadioTap(
-        present='Rate+TXFlags',
+        present='Rate+TXFlags+Channel',
         Rate=6,          # 6 Mbps — lowest rate, most compatible
         TXFlags=0x0008,   # No ACK expected (critical for spoofed frames)
         ChannelFrequency=5200,
